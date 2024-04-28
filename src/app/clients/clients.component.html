@@ -1,0 +1,38 @@
+<div class="container bg-light p-auto">
+        <div class="row">
+                <div class="col-7 m-auto">
+<form [formGroup]="formGroupStudent">
+                <h1>Cadastro de alunos</h1>
+<div class="mb-3">
+    <label for="matricula"
+           class="form-label">Email</label>
+    <input type="text" class="form-control" id="matricula" formControlName="id">
+  </div>
+   <div class="mb-3">
+    <label for="name" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+  </div>
+  <div class="mb-3">
+    <label for="curso"
+           class="form-label">Curso</label>
+    <input type="text" class="form-control" id="curso" formControlName="id">
+  </div>
+<button type="submit" class="btn btn-primary" (click)="save()" >Salvar</button>
+</form>
+                </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Matrícula</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Curso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <th scope="row">{{student.id}}</th>
+      <td>{{student.name}}</td>
+      <td>{{student.course}}</td>
+    </tr>
+  </tbody>
+</table>
