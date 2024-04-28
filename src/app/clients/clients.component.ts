@@ -23,6 +23,6 @@ export class ClientsComponent {
 }
 
   save(){
-    alert(this.formGroupStudent.value)
+    this.students.push(this.formGroupStudent.value);
   }
 }
